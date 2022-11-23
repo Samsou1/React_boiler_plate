@@ -7,6 +7,9 @@ import PrivateRoute from './config/PrivateRoute'
 import Home from './pages/Home'
 import About from './pages/About'
 import Navbar from './components/Navbar'
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+import Register from './pages/Register';
 
 function App() {
   return (

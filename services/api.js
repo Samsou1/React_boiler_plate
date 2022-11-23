@@ -16,7 +16,7 @@ API.interceptors.request.use(({ headers, ...config }) => ({
 
 export default class APIManager {
     static async registerUser(data) {
-        const response = await API.post('/auth/register', data);
+        const response = await API.post('/users', data);
         Cookies.set("token", response.headers.authorization)
         return response.data;
     }
