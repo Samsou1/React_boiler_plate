@@ -7,7 +7,7 @@ const Register = () => {
   const [password, setPassword] = useState("")
 
 
-  const [_, setUser] = useAtom (userAtom)
+  const [_, setUser] = useAtom(userAtom)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
