@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import APIManager from "../../services/api"
+import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
+function Register() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
-
-    const [_, setUser] = useAtom(userAtom)
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,21 +15,17 @@ const Register = () => {
                 password: password
             }
         }
-
         try {
-            const response = await APIManager.register(data);
-            setUser(response.data.user)
-            console.log(response)
+            await APIManager.registerUser(data);
+            navigate('/');
         } catch (err) {
             console.error(err)
         }
-
-
     }
 
     return (
         <>
-            <h1 className="title-form">Sign Up</h1>
+            <h1 className="title-form">Register</h1>
             <form onSubmit={handleSubmit} className="container-form">
                 <label htmlFor="email">Email </label>
                 <input
@@ -47,15 +41,16 @@ const Register = () => {
                 <input
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
-                    type="text"
+                    type="password"
                     id="password"
                     placeholder="password"
                 />
+
+
+
                 <button>Sign Up</button>
             </form>
         </>
     )
 }
-
-
 export default Register
