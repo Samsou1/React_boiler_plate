@@ -47,7 +47,7 @@ function Login() {
           placeholder="password"
         />
 
-        <button>Sign Up</button>
+        <button className="btn-signup">Sign Up</button>
       </form>
       <p>Don't have an account?</p>
       <Link className="link" to='/register' >Register</Link>

@@ -48,4 +48,14 @@ export default class APIManager {
             }
         }
     }
+    static async resetPassword(payload) {
+        if(Cookies.get("currentUser")){
+            try{
+                const response = await API.get('/users/password/new', payload);
+                return response;
+            }catch{
+                throw new Error("Something went wrong");
+            }
+        }
+    }
 }
