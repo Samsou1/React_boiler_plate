@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import APIManager from "../../services/api"
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Register() {
     const [email, setEmail] = useState("")
@@ -45,11 +46,10 @@ function Register() {
                     id="password"
                     placeholder="password"
                 />
-
-
-
                 <button>Sign Up</button>
             </form>
+                <p>Already have an account?</p>
+                <Link className="link" to='/login' >Log in</Link>
         </>
     )
 }

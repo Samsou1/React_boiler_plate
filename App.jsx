@@ -10,22 +10,25 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Resetpassword from './pages/ResetPassword'
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <main>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/register' element={<Register />} /> 
           <Route path='/login' element={<Login />} /> 
+          <Route path='/about' element={<About />} />
+          <Route path='/resetpassword' element={<Resetpassword />} />
           <Route element={<PrivateRoute />}>
-            <Route path='/about' element={<About />} />
+
           </Route>
         </Routes>
-        <Footer/>
       </main>
+      <Footer/>
     </BrowserRouter>
   )
 }

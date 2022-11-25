@@ -4,18 +4,18 @@ import { userAtom } from '../../store/user';
 import LogoutButton from '../LogoutButton';
 
 const Navbar = () => {
-  const user = useAtomValue(userAtom);
-  return (
+  return(
     <header>
-      <nav className="navbar">
-        <ul className="navbarItems">
-          <li><Link className="link" to='/' >Home</Link></li>
-          <li><Link className="link" to='/about' >About</Link></li>
-          <li><Link className="link" to='/login' >Log in</Link></li>
-          <li><Link className="link" to='/register' >Register</Link></li>
-          <LogoutButton/>
-        </ul>
-      </nav>
+        <img src="../../../public/logo.png" alt="logo"></img>
+        <nav>
+          <ul>
+            <li><Link className="link" to='/' >Home</Link></li>
+            <li><Link className="link" to='/about' >About</Link></li>
+            <li><Link className="link" to='/login' >Log in</Link></li>
+            <li><Link className="link" to='/register' >Register</Link></li>
+            <li><LogoutButton/></li>
+          </ul>
+        </nav>
     </header>
   )
 }
