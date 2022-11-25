@@ -29,30 +29,36 @@ function Login() {
     <>
       <h1 className="title-form">Login</h1>
       <form onSubmit={handleSubmit} className="container-form">
-        <label htmlFor="username">Email </label>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          type="text"
-          id="email"
-          placeholder="email"
-        />
-        <label htmlFor="password">Password</label>
-
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-          type="text"
-          id="password"
-          placeholder="password"
-        />
-
+        <div className='input-container'>
+          <label bel htmlFor="username">Email </label>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            type="text"
+            id="email"
+            placeholder="Email"
+            />
+        </div>
+        <div className='input-container'>
+          <label htmlFor="password">Password</label>
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            type="text"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
         <button className="btn-signup">Sign Up</button>
+        <div>
+          <p>Don't have an account?</p>
+          <Link className="link" to='/register' >Register</Link>
+        </div>
+        <div>
+          <p>Don't remember your password?</p>
+          <Link className="link" to='/resetpassword' >Click here</Link>
+        </div>
       </form>
-      <p>Don't have an account?</p>
-      <Link className="link" to='/register' >Register</Link>
-      <p>Don't remember your password?</p>
-      <Link className="link" to='/resetpassword' >Click here</Link>
     </>
   );
 }

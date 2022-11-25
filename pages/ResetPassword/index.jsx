@@ -24,14 +24,16 @@ const ResetPassword = () => {
     <>
       <h1 className="title-form">Reset your password</h1>
       <form onSubmit={handleSubmit} className="container-form">
-        <label htmlFor="email">Email </label>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          type="text"
-          id="email"
-          placeholder="email"
-        />
+        <div className="input-container">
+          <label htmlFor="email">Email </label>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            type="text"
+            id="email"
+            placeholder="Email"
+          />
+        </div>
         <button>Reset password</button>
       </form>
     </>

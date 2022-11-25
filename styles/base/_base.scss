@@ -23,11 +23,26 @@ main{
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  gap: 1rem;
 }
 
 form{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border-radius: 5px;
+  min-height: 2rem;
+  min-width: 15rem;
 }
 
 main > div{
