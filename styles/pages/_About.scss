@@ -8,6 +8,10 @@
 .about-story{
   max-width: 80%;
   display: flex;
+  border: solid #659DBD 1px;
+  border-radius: 5px;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .about-story-left{
@@ -18,13 +22,26 @@
   flex: 1;
 }
 
+.about-story-right > img{
+  width:100%;
+}
+
 .about-goal{
   max-width: 80%;
   display: flex;
+  border: solid #659DBD 1px;
+  border-radius: 5px;
+  gap:1rem;
+  padding: 1rem;
+
 }
 
 .about-goal-left{
   flex: 1;
+}
+
+.about-goal-left > img{
+  width:100%;
 }
 
 .about-goal-right{
@@ -36,6 +53,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: solid #659DBD 1px;
+  border-radius: 5px;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .team-cards{
@@ -52,6 +73,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  border: solid #659DBD 1px;
+  border-radius: 5px;
+  padding: 1rem;
 }
 
 .member-card > img{
